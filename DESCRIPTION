@@ -1,0 +1,13 @@
+Package: cuteFileBrowser
+Type: Package
+Title: Cute File Browser
+Version: 0.1.0
+Author: Rener Castro
+Maintainer: Rener Castro <renercastro@gmail.com>
+Description: A Cute File Browser to help you select server-side files. (see https://tutorialzine.com/2014/09/cute-file-browser-jquery-ajax-php).
+License: GPL (>= 2)
+Depends: R (>= 3.0.0)
+Encoding: UTF-8
+LazyData: true
+Imports: shiny
+RoxygenNote: 6.0.1

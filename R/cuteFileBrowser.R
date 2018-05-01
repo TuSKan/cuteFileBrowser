@@ -1,3 +1,6 @@
+#' @include utils.R
+NULL
+
 #' Cute File Browser
 #'
 #' Create a materialize file input
@@ -61,12 +64,12 @@ cuteFileBrowserUI <- function(inputId) {
     shiny::singleton(
       shiny::tags$head(
         shiny::tags$link(
-          href = "www/css/cuteFileBrowser.css",
+          href = "www/cuteFileBrowser/css/cuteFileBrowser.css",
           rel = 'stylesheet',
           type = 'text/css'
         ),
         shiny::tags$script(
-          src = "www/js/cuteFileBrowser.js"
+          src = "www/cuteFileBrowser/js/cuteFileBrowser.js"
         )
       )
     )

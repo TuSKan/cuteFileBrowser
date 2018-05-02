@@ -26,7 +26,6 @@
 
 
 .cuteFileBrowser .breadcrumbs {
-	color: #ffffff;
 	margin-left:20px;
 	font-size: 24px;
 	font-weight: 700;
@@ -34,7 +33,6 @@
 }
 
 .cuteFileBrowser .breadcrumbs a:link, .breadcrumbs a:visited {
-	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -61,7 +59,6 @@
 	cursor: pointer;
 	right: 0;
 	font-size: 17px;
-	color: #ffffff;
 	display: block;
 	width: 40px;
 	height: 40px;
@@ -74,7 +71,7 @@
 	width: 10px;
 	height: 11px;
 	border-radius: 50%;
-	border: 2px solid #ffffff;
+	border: 2px solid #00000;
 	right: 8px;
 }
 
@@ -82,7 +79,6 @@
 	content: '';
 	width: 3px;
 	height: 10px;
-	background-color: #ffffff;
 	border-radius: 2px;
 	position: absolute;
 	top: 23px;
@@ -94,7 +90,6 @@
 .cuteFileBrowser .search input[type=search] {
 	border-radius: 2px;
 	color: #4D535E;
-	background-color: #FFF;
 	width: 250px;
 	height: 44px;
 	margin-left: -215px;
@@ -158,7 +153,6 @@
 }
 
 .cuteFileBrowser .data li .name {
-	color: #ffffff;
 	font-size: 15px;
 	font-weight: 700;
 	line-height: 20px;
@@ -207,7 +201,6 @@
 .cuteFileBrowser .nothingfound .nofiles:after {
 	content: '×';
 	position: absolute;
-	color: #ffffff;
 	font-size: 14em;
 	margin-right: 0.092em;
 	right: 0;
@@ -215,7 +208,6 @@
 
 .cuteFileBrowser .nothingfound span {
 	margin: 0 auto auto 6.8em;
-	color: #ffffff;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 20px;
@@ -278,7 +270,7 @@
 }
 .icon.folder.full:after {
 	height: 2.15em;
-	box-shadow: 0 -0.12em 0 0 #ffffff;
+	box-shadow: 0 -0.12em 0 0 #00000;
 }
 
 .icon.file {
@@ -287,7 +279,6 @@
 	line-height: 3em;
 	text-align: center;
 	border-radius: 0.25em;
-	color: #FFF;
 	display: inline-block;
 	margin: 0.9em 1.2em 0.8em 1.3em;
 	position: relative;

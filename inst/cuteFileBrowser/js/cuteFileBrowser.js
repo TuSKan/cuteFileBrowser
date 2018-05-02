@@ -17,8 +17,7 @@
     // Init
 	  currentPath = data.path;
 		breadcrumbsUrls.push(data.path);
-		render(searchByPath(data.path));
-		filemanager.prop("filepath","");
+		render(data.items);
 
 		// Hiding and showing the search box
 		filemanager.find('.search').click(function(){
@@ -77,7 +76,7 @@
 			e.preventDefault();
 			$('.cuteFileBrowser .data li.files').removeClass("selected");
 			$(this).addClass("selected");
-			filemanager.prop("filepath", $(this).find('a.files').attr('href')).change();
+			filemanager.prop("datapath", searchByPath($(this).find('a.files').attr('href'))).change();
 		});
 
 
@@ -142,7 +141,7 @@
 
 		// Splits a file path and turns it into clickable breadcrumbs
 		function generateBreadcrumbs(nextDir){
-			var path = nextDir.split('/').slice(0);
+			var path = [data.name].concat(nextDir.split(data.name)[1].split('/').filter(function(e){return e}).slice(0));
 			for(var i=1;i<path.length;i++){
 				path[i] = path[i-1]+ '/' +path[i];
 			}
@@ -152,15 +151,19 @@
 
 		// Locates a file by path
 		function searchByPath(dir) {
-			var path = dir.split('/'),
-				demo = response,
-				flag = 0;
+		  var	demo = response;
+			var path = [data.name].concat(dir.split(data.name)[1].split("/").filter(function(e){return e}));
+			var	flag = 0;
 
 			for(var i=0;i<path.length;i++){
 				for(var j in demo){
 					if(demo[j].name === path[i]){
 						flag = 1;
-						demo = demo[j].items;
+						if (demo[j].type === 'folder') {
+						  demo = demo[j].items;
+						} else {
+						  demo = demo[j];
+						}
 						break;
 					}
 				}
@@ -340,7 +343,7 @@ $(document).ready(function () {
              return $(scope).find(".cuteFileBrowser");
          },
          getValue: function (el) {
-           return $(el).prop("filepath");
+           return $(el).prop("datapath");
          },
          subscribe: function (el, callback) {
              $(el).on("change.cuteFileBrowser", function (e) {

@@ -64,12 +64,12 @@ cuteFileBrowserUI <- function(inputId) {
     shiny::singleton(
       shiny::tags$head(
         shiny::tags$link(
-          href = "www/cuteFileBrowser/css/cuteFileBrowser.css",
+          href = "cuteFileBrowser/css/cuteFileBrowser.css",
           rel = 'stylesheet',
           type = 'text/css'
         ),
         shiny::tags$script(
-          src = "www/cuteFileBrowser/js/cuteFileBrowser.js"
+          src = "cuteFileBrowser/js/cuteFileBrowser.js"
         )
       )
     )

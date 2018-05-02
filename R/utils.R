@@ -1,6 +1,6 @@
 
 .onLoad <- function(...) {
-  shiny::addResourcePath('www', system.file('www', package = 'cuteFileBrowser'))
+  shiny::addResourcePath('cuteFileBrowser', system.file('cuteFileBrowser', package = 'cuteFileBrowser'))
 }
 
 file.structure <- function(dir) {

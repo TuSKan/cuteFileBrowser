@@ -310,9 +310,8 @@
 
 			// Show the generated elements
 
-			fileList.animate({'display':'inline-block'});
-			fileList.css({'display':'inline-block'});
-
+			fileList.animate({'display':'grid','grid-template-columns': 'repeat(auto-fill, minmax(250px, 1fr))'});
+			fileList.css({'display':'grid','grid-template-columns': 'repeat(auto-fill, minmax(250px, 1fr))'});
 		}
 
 
